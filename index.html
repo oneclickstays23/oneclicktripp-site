@@ -7,7 +7,7 @@
 <meta name="description" content="OneClickStays is now OneClickTripp. Bigger journeys, more options, same trust: flights, stays and experiences in one place.">
 <meta name="theme-color" content="#FCF4EA">
 <meta http-equiv="Cache-Control" content="no-cache">
-<!-- build v3 -->
+<!-- build v4 -->
 <meta property="og:title" content="Oneclicktripp — From stays to the whole trip">
 <meta property="og:description" content="OneClickStays is now OneClickTripp. Flights · Stays · Experiences, in one place.">
 <meta property="og:image" content="https://www.oneclicktripp.com/desktop.jpg">
@@ -39,10 +39,13 @@
     --plane:2.1cqw;
   }
   @media (orientation: portrait){
-    html,body{background:#FDF8F3}
+    html,body{background:#FDF8F3;overflow:auto;height:auto;min-height:100dvh}
+    body{display:flex;align-items:center;justify-content:center;min-height:100dvh}
     .backdrop{display:none}
+    /* phones: fill the full width, scroll a little if the viewport is shorter */
     .scene{
-      aspect-ratio:716/1504;width:min(100vw, calc(100dvh * 716 / 1504));
+      position:relative;left:auto;top:auto;transform:none;
+      aspect-ratio:716/1504;width:100vw;max-width:none;
       background-image:url(mobile.jpg?v=3);
       --bar-l:4.61%; --bar-t:72.34%; --bar-w:60.61%; --bar-h:2.93%;
       --track:#FCEFE1; --paper:#FDF7F0;
