@@ -6,12 +6,14 @@
 <title>Oneclicktripp — From stays to the whole trip</title>
 <meta name="description" content="OneClickStays is now OneClickTripp. Bigger journeys, more options, same trust: flights, stays and experiences in one place.">
 <meta name="theme-color" content="#FCF4EA">
+<meta http-equiv="Cache-Control" content="no-cache">
+<!-- build v3 -->
 <meta property="og:title" content="Oneclicktripp — From stays to the whole trip">
 <meta property="og:description" content="OneClickStays is now OneClickTripp. Flights · Stays · Experiences, in one place.">
 <meta property="og:image" content="https://www.oneclicktripp.com/desktop.jpg">
 <link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 200 200'%3E%3Crect width='200' height='200' rx='44' fill='%23FFB401'/%3E%3Cg fill='none' stroke='%23fff' stroke-width='14' stroke-linecap='round'%3E%3Cpath d='M46.5 132 A64 64 0 1 1 153.5 132 A64 64 0 0 1 46.5 132'/%3E%3Cpath d='M66 115 A34 34 0 0 1 134 115'/%3E%3Cpath d='M86 115 A14 14 0 0 1 114 115'/%3E%3Cpath d='M46.5 132 H142'/%3E%3C/g%3E%3C/svg%3E">
-<link rel="preload" as="image" href="desktop.jpg" media="(orientation: landscape)">
-<link rel="preload" as="image" href="mobile.jpg" media="(orientation: portrait)">
+<link rel="preload" as="image" href="desktop.jpg?v=3" media="(orientation: landscape)">
+<link rel="preload" as="image" href="mobile.jpg?v=3" media="(orientation: portrait)">
 <link rel="preconnect" href="https://api.fontshare.com" crossorigin>
 <link href="https://api.fontshare.com/v2/css?f[]=general-sans@500,600,700&display=swap" rel="stylesheet">
 <style>
@@ -21,13 +23,13 @@
   body{font-family:"General Sans",system-ui,-apple-system,"Segoe UI",Roboto,sans-serif;-webkit-font-smoothing:antialiased;color:var(--ink)}
 
   /* letterbox fill: blurred artwork on landscape, flat cream on portrait */
-  .backdrop{position:fixed;inset:-40px;background:url(desktop.jpg) center/cover no-repeat;filter:blur(30px) brightness(1.02);transform:scale(1.1);opacity:.9}
+  .backdrop{position:fixed;inset:-40px;background:url(desktop.jpg?v=3) center/cover no-repeat;filter:blur(30px) brightness(1.02);transform:scale(1.1);opacity:.9}
 
   /* the artwork, fitted to the viewport at its own aspect ratio */
   .scene{
     position:fixed;left:50%;top:50%;transform:translate(-50%,-50%);
     aspect-ratio:1672/941;width:min(100vw, calc(100dvh * 1672 / 941));
-    background:url(desktop.jpg) center/100% 100% no-repeat;
+    background:url(desktop.jpg?v=3) center/100% 100% no-repeat;
     container-type:inline-size;
     /* overlay geometry (% of artwork) — desktop */
     --bar-l:7.06%; --bar-t:57.17%; --bar-w:28.71%; --bar-h:5.10%;
@@ -41,7 +43,7 @@
     .backdrop{display:none}
     .scene{
       aspect-ratio:716/1504;width:min(100vw, calc(100dvh * 716 / 1504));
-      background-image:url(mobile.jpg);
+      background-image:url(mobile.jpg?v=3);
       --bar-l:4.61%; --bar-t:72.34%; --bar-w:60.61%; --bar-h:2.93%;
       --track:#FCEFE1; --paper:#FDF7F0;
       --lbl-l:66.8%; --lbl-t:72.0%; --lbl-w:12%; --lbl-h:3.6%; --lbl-fs:4.5cqw;
